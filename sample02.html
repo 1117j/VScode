@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1> 문장 바꾸어 보기</h1>
+    <p id = "going">이 문장은 변경 될 예정이다 =</p>
+    <p class ="james"> 이것은 아이스크림가</h2>
+    <script> 
+        var str = document.getElementById("going"); 
+        str.innerHTML = "문장을 바꿉니다."
+    
+
+    var selectedItem = document.getElementsByTagName("h1"); // 모든 <li> 요소를 선택함.
+
+    for (var i = 0; i < selectedItem.length; i++) {
+
+    selectedItem.item(i).style.color = "red"; // 선택된 모든 요소의 텍스트 색상을 변경함.
+
+
+    var selected = document.getElementsByClassName("james");
+
+    for(var i = 0; i <selected.length; i++){
+
+        selected.item(i).style.color="brown";
+    }
+
+}
+
+    
+    </script>
+</body>
+</html>

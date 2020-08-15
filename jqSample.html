@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $("p").on("click",function(){
+                $("p").css("color", "red");
+
+            });
+        });
+
+
+
+        function func(){
+            addAttribute(); 
+            createElement(); 
+        }
+
+
+        function createElement(){
+            var cri = document.getElementById("text"); 
+            var nn = document.createElement("p"); 
+
+            nn.innerHTML = "새롭다"; 
+            nn.setAttribute("id" , "para"); 
+            document.body.insertBefore(nn, cri); 
+        }
+
+
+        function addAttribute(){
+            document.getElementById("para").setAttribute("style",
+            "color:red");
+        }
+    </script>
+</head>
+<body>
+    <p> 색상을 바꾸어 봅시다.</p>
+
+    <button onclick ="func()"> 추가를 하자 </button>
+    <p id = "text"></p>
+</body>
+</html>

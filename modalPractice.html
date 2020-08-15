@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 모달연습</title>
+
+<style> 
+   #modal h1{ 
+       margin : 0; 
+        background-color: lightpink;
+    }
+
+    #modal {
+        display: none; 
+        position : relative; 
+        width: 100% ; 
+        height: 100%; 
+        z-index: 1;
+    }
+
+    #modal button{
+        display:inline-block; 
+        width  :100px; 
+        margin-left : calc(100% - 100px - 10px); 
+
+    }
+
+    .modalContent{
+        width: 300px; 
+        margin : 100px auto; 
+        padding : 20px 10px; 
+        background-color: lightsalmon;
+        border: 2px solid purple; 
+
+    }
+
+    #modal.modalLayer{
+        position : fixed; 
+        top : 0; 
+        left: 0; 
+        width: 100%;
+        height: 100%; 
+        background: rgba(0,0,0,-0.5);
+        z-index: -1; 
+    }
+
+</style>
+</head>
+<body>
+
+    <div id="root">
+   
+        <button type ="button" id ="modalOpen">모달창</button>
+           
+    </div>
+
+
+<div id = "modal"> 
+    <div class = "modalContent">
+    <h1> 모달창이다.</h1>
+    <button type ="button" id = "modalClose">이거닫기</button>
+</div>
+</div>
+
+<div class = "modalLayer"> </div>
+
+
+<script> 
+
+/*url : 모달팝업으로 표시할 페이지 url  */
+/*args : 모달 팝업창에 전달받을 변수나 객체  */
+/*options :  dialogWidth, dialogHeight와 같은 팝업창속성  */
+/* var rtn = window.showModalDialog(url, args, option); */
+
+ document.getElementById("modalOpen").onclick =function(){
+     document.getElementById("modal").style.display ="block"; 
+ }
+
+document.getElementById("modalClose").onclick = function(){
+    document.getElementById("modal").style.display ="none"; 
+}
+</script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+    <ul id="sortable">
+
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+      
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+      
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+      
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+      
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+      
+      </ul>
+      
+      <div>
+
+        <div style="float:left;width:100px;">아이템 추가 : </div>
+    
+        <div style="clar:both;">
+    
+            <input type="button" id="addItem" value="추가" onclick="createItem();" />
+    
+            <input type="button" id="submitItem" value="제출" onclick="submitItem();" />
+    
+        </div>
+    
+    </div>
+    
+    <br />
+    
+    <div id="itemBoxWrap"></div>
+    
+    
+
+      
+</body>
+</html>
+<script> 
+$(function() {
+
+$("#sortable").sortable();
+
+$("#sortable").disableSelection();
+
+});
+
+
+
+</script>
