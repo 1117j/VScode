@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\VS"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/html": true,
+			"html": true
+		}
+	}
+}
